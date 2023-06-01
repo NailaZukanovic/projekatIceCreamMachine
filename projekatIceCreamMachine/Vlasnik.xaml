@@ -1,0 +1,49 @@
+﻿<Window x:Class="projekatIceCreamMachine.Vlasnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekatIceCreamMachine"
+        mc:Ignorable="d"
+        Title="Vlasnik" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox Text="Stanje cokolade" Margin="5" x:Name="stanjeCokolade"/>
+            <TextBox Text="Stanje vanile" Margin="5" x:Name="stanjeVanile"/>
+            <TextBox Text="Stanje jagode" Margin="5" x:Name="stanjeJagode"/>
+            <Button Background="AntiqueWhite" Margin="10" Click="Button_Click">Izmeni stanja</Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Chart 1 -->
+            <Grid Grid.Column="0">
+                <Rectangle x:Name="grafCokolade" Fill="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="50" Margin="5,0" />
+                <TextBlock x:Name="cokolada" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+            <!-- Chart 2 -->
+            <Grid Grid.Column="1">
+                <Rectangle x:Name="grafVanile" Fill="LightGreen" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="150" Width="50" Margin="5,0" />
+                <TextBlock x:Name="vanila" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+            <!-- Chart 3 -->
+            <Grid Grid.Column="2">
+                <Rectangle x:Name="grafJagode" Fill="LightPink" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="50" Margin="5,0" />
+                <TextBlock x:Name="jagode" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Window>
